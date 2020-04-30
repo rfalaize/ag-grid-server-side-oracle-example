@@ -1,0 +1,59 @@
+{
+    "name": "REQUEST 2 (no pivot + expand)",
+    "request": {
+        "startRow": 0,
+        "endRow": 100,
+        "rowGroupCols": [
+            {
+                "id": "PRODUCT",
+                "displayName": "Product",
+                "field": "PRODUCT"
+            },
+            {
+                "id": "PORTFOLIO",
+                "displayName": "Portfolio",
+                "field": "PORTFOLIO"
+            },
+            {
+                "id": "BOOK",
+                "displayName": "Book",
+                "field": "BOOK"
+            }
+        ],
+        "valueCols": [
+            {
+                "id": "CURRENTVALUE",
+                "aggFunc": "sum",
+                "displayName": "Current",
+                "field": "CURRENTVALUE"
+            }
+        ],
+        "pivotCols": [
+            {
+                "id": "DEALTYPE",
+                "displayName": "Deal Type",
+                "field": "DEALTYPE"
+            },
+            {
+                "id": "BIDTYPE",
+                "displayName": "Bid",
+                "field": "BIDTYPE"
+            }
+        ],
+        "pivotMode": false,
+        "groupKeys": ["Wool"],
+        "filterModel": {},
+        "sortModel": []
+    },
+    "response": {
+        "data": [
+            { "PRODUCT": "Wool", "PORTFOLIO": "Income", "CURRENTVALUE": 9639780 },
+            { "PRODUCT": "Wool", "PORTFOLIO": "Aggressive", "CURRENTVALUE": 7101036 },
+            { "PRODUCT": "Wool", "PORTFOLIO": "Speculative", "CURRENTVALUE": 1223245 },
+            { "PRODUCT": "Wool", "PORTFOLIO": "Defensive", "CURRENTVALUE": -8960713 },
+            { "PRODUCT": "Wool", "PORTFOLIO": "Hybrid", "CURRENTVALUE": 3434810 }
+        ],
+        "lastRow": 5,
+        "secondaryColumnFields": ["Physical_Buy_CURRENTVALUE", "Physical_Sell_CURRENTVALUE", "Financial_Buy_CURRENTVALUE", "Financial_Sell_CURRENTVALUE"]
+    }
+}

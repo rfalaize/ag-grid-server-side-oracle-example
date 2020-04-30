@@ -1,0 +1,48 @@
+{
+    "name": "REQUEST 3 (pivot, no column)",
+    "request": {
+        "startRow": 0,
+        "endRow": 100,
+        "rowGroupCols": [
+            {
+                "id": "PRODUCT",
+                "displayName": "Product",
+                "field": "PRODUCT"
+            },
+            {
+                "id": "PORTFOLIO",
+                "displayName": "Portfolio",
+                "field": "PORTFOLIO"
+            },
+            {
+                "id": "BOOK",
+                "displayName": "Book",
+                "field": "BOOK"
+            }
+        ],
+        "valueCols": [
+            {
+                "id": "CURRENTVALUE",
+                "aggFunc": "sum",
+                "displayName": "Current",
+                "field": "CURRENTVALUE"
+            }
+        ],
+        "pivotCols": [],
+        "pivotMode": true,
+        "groupKeys": [],
+        "filterModel": {},
+        "sortModel": []
+    },
+    "response": {
+        "data": [
+            { "PRODUCT": "Palm Oil", "CURRENTVALUE": -10242764 },
+            { "PRODUCT": "Wheat", "CURRENTVALUE": -6075640 },
+            { "PRODUCT": "Coca", "CURRENTVALUE": 11557172 },
+            { "PRODUCT": "Cotton No.2", "CURRENTVALUE": 8521827 },
+            { "PRODUCT": "Wool", "CURRENTVALUE": 12438158 }
+        ],
+        "lastRow": 28,
+        "secondaryColumnFields": ["_CURRENTVALUE"]
+    }
+}

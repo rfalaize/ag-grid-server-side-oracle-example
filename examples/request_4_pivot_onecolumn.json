@@ -1,0 +1,54 @@
+{
+    "name": "REQUEST 3 (pivot, 1 column)",
+    "request": {
+        "startRow": 0,
+        "endRow": 100,
+        "rowGroupCols": [
+            {
+                "id": "PRODUCT",
+                "displayName": "Product",
+                "field": "PRODUCT"
+            },
+            {
+                "id": "PORTFOLIO",
+                "displayName": "Portfolio",
+                "field": "PORTFOLIO"
+            },
+            {
+                "id": "BOOK",
+                "displayName": "Book",
+                "field": "BOOK"
+            }
+        ],
+        "valueCols": [
+            {
+                "id": "CURRENTVALUE",
+                "aggFunc": "sum",
+                "displayName": "Current",
+                "field": "CURRENTVALUE"
+            }
+        ],
+        "pivotCols": [
+            {
+                "id": "DEALTYPE",
+                "displayName": "Deal Type",
+                "field": "DEALTYPE"
+            }
+        ],
+        "pivotMode": true,
+        "groupKeys": [],
+        "filterModel": {},
+        "sortModel": []
+    },
+    "response": {
+        "data": [
+            { "PRODUCT": "Palm Oil", "Physical_CURRENTVALUE": -11996110, "Financial_CURRENTVALUE": 1753346 },
+            { "PRODUCT": "Wheat", "Physical_CURRENTVALUE": -6862186, "Financial_CURRENTVALUE": 786546 },
+            { "PRODUCT": "Coca", "Physical_CURRENTVALUE": 8175700, "Financial_CURRENTVALUE": 3381472 },
+            { "PRODUCT": "Cotton No.2", "Physical_CURRENTVALUE": 5408920, "Financial_CURRENTVALUE": 3112907 },
+            { "PRODUCT": "Wool", "Physical_CURRENTVALUE": 6751396, "Financial_CURRENTVALUE": 5686762 }
+        ],
+        "lastRow": 28,
+        "secondaryColumnFields": ["Physical_CURRENTVALUE", "Financial_CURRENTVALUE"]
+    }
+}

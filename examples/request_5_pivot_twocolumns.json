@@ -1,0 +1,65 @@
+{
+    "name": "REQUEST 4 (pivot, 1 column)",
+    "request": {
+        "startRow": 0,
+        "endRow": 100,
+        "rowGroupCols": [
+            {
+                "id": "PRODUCT",
+                "displayName": "Product",
+                "field": "PRODUCT"
+            },
+            {
+                "id": "PORTFOLIO",
+                "displayName": "Portfolio",
+                "field": "PORTFOLIO"
+            },
+            {
+                "id": "BOOK",
+                "displayName": "Book",
+                "field": "BOOK"
+            }
+        ],
+        "valueCols": [
+            {
+                "id": "CURRENTVALUE",
+                "aggFunc": "sum",
+                "displayName": "Current",
+                "field": "CURRENTVALUE"
+            },
+            {
+                "id": "PREVIOUSVALUE",
+                "aggFunc": "sum",
+                "displayName": "Previous",
+                "field": "PREVIOUSVALUE"
+            }
+        ],
+        "pivotCols": [
+            {
+                "id": "DEALTYPE",
+                "displayName": "Deal Type",
+                "field": "DEALTYPE"
+            },
+            {
+                "id": "BIDTYPE",
+                "displayName": "Bid",
+                "field": "BIDTYPE"
+            }
+        ],
+        "pivotMode": true,
+        "groupKeys": [],
+        "filterModel": {},
+        "sortModel": []
+    },
+    "response": {
+        "data": [
+            { "PRODUCT": "Palm Oil", "Physical_Buy_CURRENTVALUE": -6378944, "Physical_Buy_PREVIOUSVALUE": -7271329, "Physical_Sell_CURRENTVALUE": -5617166, "Physical_Sell_PREVIOUSVALUE": -101576, "Financial_Buy_CURRENTVALUE": 2583804, "Financial_Buy_PREVIOUSVALUE": -4247602, "Financial_Sell_CURRENTVALUE": -830458, "Financial_Sell_PREVIOUSVALUE": -2703720 },
+            { "PRODUCT": "Wheat", "Physical_Buy_CURRENTVALUE": -9390468, "Physical_Buy_PREVIOUSVALUE": 4773802, "Physical_Sell_CURRENTVALUE": 2528282, "Physical_Sell_PREVIOUSVALUE": 1513040, "Financial_Buy_CURRENTVALUE": 1553216, "Financial_Buy_PREVIOUSVALUE": -2064633, "Financial_Sell_CURRENTVALUE": -766670, "Financial_Sell_PREVIOUSVALUE": 1297853 },
+            { "PRODUCT": "Coca", "Physical_Buy_CURRENTVALUE": -86723, "Physical_Buy_PREVIOUSVALUE": -4166514, "Physical_Sell_CURRENTVALUE": 8262423, "Physical_Sell_PREVIOUSVALUE": -2785824, "Financial_Buy_CURRENTVALUE": 5119847, "Financial_Buy_PREVIOUSVALUE": 1061249, "Financial_Sell_CURRENTVALUE": -1738375, "Financial_Sell_PREVIOUSVALUE": 739799 },
+            { "PRODUCT": "Cotton No.2", "Physical_Buy_CURRENTVALUE": 112981, "Physical_Buy_PREVIOUSVALUE": -3326262, "Physical_Sell_CURRENTVALUE": 5295939, "Physical_Sell_PREVIOUSVALUE": 5143417, "Financial_Buy_CURRENTVALUE": -3644710, "Financial_Buy_PREVIOUSVALUE": 6249102, "Financial_Sell_CURRENTVALUE": 6757617, "Financial_Sell_PREVIOUSVALUE": 1862579 },
+            { "PRODUCT": "Wool", "Physical_Buy_CURRENTVALUE": 6581997, "Physical_Buy_PREVIOUSVALUE": 4528891, "Physical_Sell_CURRENTVALUE": 169399, "Physical_Sell_PREVIOUSVALUE": -1633266, "Financial_Buy_CURRENTVALUE": 3250193, "Financial_Buy_PREVIOUSVALUE": 2887884, "Financial_Sell_CURRENTVALUE": 2436569, "Financial_Sell_PREVIOUSVALUE": 371697 }
+        ],
+        "lastRow": 28,
+        "secondaryColumnFields": ["Physical_Buy_CURRENTVALUE", "Physical_Buy_PREVIOUSVALUE", "Physical_Sell_CURRENTVALUE", "Physical_Sell_PREVIOUSVALUE", "Financial_Buy_CURRENTVALUE", "Financial_Buy_PREVIOUSVALUE", "Financial_Sell_CURRENTVALUE", "Financial_Sell_PREVIOUSVALUE"]
+    }
+}

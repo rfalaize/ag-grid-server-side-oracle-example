@@ -1,0 +1,64 @@
+{
+    "name": "REQUEST 6 (pivot + scroll)",
+    "request": {
+        "startRow": 100,
+        "endRow": 200,
+        "rowGroupCols": [
+            {
+                "id": "BOOK",
+                "displayName": "Book",
+                "field": "BOOK"
+            },
+            {
+                "id": "PRODUCT",
+                "displayName": "Product",
+                "field": "PRODUCT"
+            },
+            {
+                "id": "PORTFOLIO",
+                "displayName": "Portfolio",
+                "field": "PORTFOLIO"
+            }
+        ],
+        "valueCols": [
+            {
+                "id": "CURRENTVALUE",
+                "aggFunc": "sum",
+                "displayName": "Current",
+                "field": "CURRENTVALUE"
+            },
+            {
+                "id": "PREVIOUSVALUE",
+                "aggFunc": "sum",
+                "displayName": "Previous",
+                "field": "PREVIOUSVALUE"
+            }
+        ],
+        "pivotCols": [],
+        "pivotMode": true,
+        "groupKeys": [],
+        "filterModel": {},
+        "sortModel": []
+    },
+    "response_with_more_rows_to_fetch": {
+        "data": [
+            { "BOOK": "GL-63347", "CURRENTVALUE": 39842, "PREVIOUSVALUE": 293223 },
+            { "BOOK": "GL-63361", "CURRENTVALUE": 221526, "PREVIOUSVALUE": 51043 },
+            { "BOOK": "GL-63372", "CURRENTVALUE": 228815, "PREVIOUSVALUE": -63204 },
+            { "BOOK": "GL-63382", "CURRENTVALUE": 247305, "PREVIOUSVALUE": -381023 },
+            { "BOOK": "GL-63384", "CURRENTVALUE": 676908, "PREVIOUSVALUE": -159441 }
+        ],
+        "lastRow": -1,
+        "secondaryColumnFields": ["_CURRENTVALUE", "_PREVIOUSVALUE"]
+    },
+    "response_last_rows": {
+        "data": [
+            { "BOOK": "GL-71120", "CURRENTVALUE": 226178, "PREVIOUSVALUE": 547690 },
+            { "BOOK": "GL-71129", "CURRENTVALUE": -906138, "PREVIOUSVALUE": 889743 },
+            { "BOOK": "GL-71145", "CURRENTVALUE": -868669, "PREVIOUSVALUE": -761699 },
+            { "BOOK": "GL-71155", "CURRENTVALUE": 1090418, "PREVIOUSVALUE": -742174 }
+        ],
+        "lastRow": 8704,
+        "secondaryColumnFields": ["_CURRENTVALUE", "_PREVIOUSVALUE"]
+    }
+}
