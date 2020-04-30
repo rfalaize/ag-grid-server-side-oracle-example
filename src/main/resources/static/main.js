@@ -81,7 +81,7 @@ function EnterpriseDatasource() {}
 
 EnterpriseDatasource.prototype.getRows = function (params) {
   let jsonRequest = JSON.stringify(params.request, null, 2);
-  console.log(jsonRequest);
+  console.log("request:", jsonRequest);
 
   let httpRequest = new XMLHttpRequest();
   httpRequest.open('POST', 'http://localhost:9090/getRows');
@@ -90,6 +90,7 @@ EnterpriseDatasource.prototype.getRows = function (params) {
   httpRequest.onreadystatechange = () => {
     if (httpRequest.readyState === 4 && httpRequest.status === 200) {
       let result = JSON.parse(httpRequest.responseText);
+      console.log("response:", httpRequest.responseText);
       params.successCallback(result.data, result.lastRow);
 
       updateSecondaryColumns(params.request, result);
